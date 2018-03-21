@@ -1,0 +1,20 @@
+var _user$project$Union$respond = function (answer) {
+	var _p0 = answer;
+	switch (_p0.ctor) {
+		case 'Yes':
+			return 'Okay';
+		case 'No':
+			return 'Not Good';
+		default:
+			return _p0._0;
+	}
+};
+var _user$project$Union$Other = function (a) {
+	return {ctor: 'Other', _0: a};
+};
+var _user$project$Union$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
+	_elm_lang$html$Html$text(
+		_user$project$Union$respond(
+			_user$project$Union$Other('Hello'))));
+var _user$project$Union$No = {ctor: 'No'};
+var _user$project$Union$Yes = {ctor: 'Yes'};
