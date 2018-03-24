@@ -21,7 +21,7 @@ initialModel =
 
 
 type Msg
-    = Increase
+    = Increase Int
 
 
 
@@ -32,7 +32,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ div [] [ text (toString model.count) ]
-        , button [ onClick Increase ] [ text "Click" ]
+        , button [ onClick (Increase (model.count)) ] [ text "Click" ]
         ]
 
 
@@ -43,5 +43,5 @@ view model =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update message model =
     case message of
-        Increase ->
-            ( { model | count = model.count + 1 }, Cmd.none )
+        Increase num ->
+            ( { model | count = model.count + num }, Cmd.none )
