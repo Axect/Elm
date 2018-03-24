@@ -13,7 +13,7 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    { count = 0 }
+    { count = 1 }
 
 
 

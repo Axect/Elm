@@ -1,6 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (Html, program)
+import Html exposing (Html, div, program)
 import Widget
 
 
@@ -31,7 +31,7 @@ type Msg
 
 view : AppModel -> Html Msg
 view model =
-    Html.div []
+    div []
         [ Html.map WidgetMsg (Widget.view model.widgetModel) ]
 
 
